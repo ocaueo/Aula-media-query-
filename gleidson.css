@@ -1,0 +1,116 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.box{
+    margin: 0 auto;
+    width: 960px;
+    background-color: darkred;
+    color: white;
+    height: 100vh;
+    padding: 26px;
+}
+
+header{
+    width: 100%;
+    background-color: blueviolet;
+    padding: 0 120px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    gap: 26px;
+}
+
+header nav ul a{
+    display: block;
+    line-height: 40px;
+    margin: 10px 0;
+    color: white;
+}
+
+header .logo{
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+header .btn-menu{
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+}
+
+header .btn-menu ion-icon{
+    color: white;
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 1024px){
+    .box{
+        width: 100%;
+        background-color: blue;
+    }
+    header{
+        padding: 0 60px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .box{
+        background-color: green;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .box{
+        background-color: crimson;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    header nav{
+        padding: 14px 0;
+        justify-content: center;
+    }
+    header nav ul{
+        width: calc(100% - 60px);
+        height: calc(100vh - 60px);
+        background-color: white;
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        display: initial;
+        transition-duration: 300ms;
+    }
+    header nav ul.active{
+        left: 0;
+    }
+    header nav ul a{
+        color: black;
+        padding-left: 26px;
+    }
+}
+
+@media print{
+    .box{
+        background-color: transparent;
+        border: 2px solid black;
+        color: black;
+    }
+}

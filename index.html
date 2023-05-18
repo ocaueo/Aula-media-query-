@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gleidson.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="btn-menu">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+            <div class="logo">LOGO</div>
+            <ul>
+                <li><a href="#!">Home</a></li>
+                <li><a href="#!">Sobre</a></li>
+                <li><a href="#!">Serviços</a></li>
+                <li><a href="#!">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box">Minha Box</div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        let btn = document.querySelector(".btn-menu");
+        let lateral = document.querySelector("header nav ul");
+        btn.onclick = () => {
+            lateral.classList.toggle("active")
+        }
+    </script>
+</body>
+</html>
